@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{# <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>My App</title>
@@ -10,4 +10,15 @@
     <script src="{{ asset('build/static/js/main.e53fabc8.js') }}"></script>
     
 </body>
-</html>
+</html> #}
+
+{# templates/home.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div {{ react_component('Hello', { fullName: 'Fabien' }) }}>
+        Loading... <i class="fas fa-cog fa-spin fa-3x"></i>
+    </div>
+
+    <div {{ react_component('Hello') }}></div>
+{% endblock %}
